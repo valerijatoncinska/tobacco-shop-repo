@@ -1,19 +1,22 @@
-import "./App.css"
-import { Counter } from "./features/counter/Counter"
-import { Quotes } from "./features/quotes/Quotes"
-import logo from "./logo.svg"
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Quotes from './features/quotes/Quotes';
+import logo from './logo.svg';
+import OrderPage from './components/OrderPage/OrderPage';
+import AddProductForm from './components/AddProductForm/AddProductForm';
+import CheckoutPage from './components/CheckoutPage/CheckoutPage';
+import EditProductPage from './components/EditProductPage/EditProductPage';
 
-const App = () => {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <Quotes />
-        <span>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>
+            Edit <code>src/App.tsx</code> and save to reload.
+          </p>
+          <Quotes />
           <span>Learn </span>
           <a
             className="App-link"
@@ -23,7 +26,7 @@ const App = () => {
           >
             React
           </a>
-          <span>, </span>
+          <span> and </span>
           <a
             className="App-link"
             href="https://redux.js.org"
@@ -41,7 +44,7 @@ const App = () => {
           >
             Redux Toolkit
           </a>
-          <span>, </span>
+          <span> and </span>
           <a
             className="App-link"
             href="https://react-redux.js.org"
@@ -50,7 +53,7 @@ const App = () => {
           >
             React Redux
           </a>
-          ,<span> and </span>
+          <span>, </span>
           <a
             className="App-link"
             href="https://reselect.js.org"
@@ -59,10 +62,16 @@ const App = () => {
           >
             Reselect
           </a>
-        </span>
-      </header>
-    </div>
-  )
+        </header>
+        <Routes>
+          <Route path="/orders" element={<OrderPage />} />
+          <Route path="/products/new" element={<AddProductForm />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/products/edit/:id" element={<EditProductPage />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
