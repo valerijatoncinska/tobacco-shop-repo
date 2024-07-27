@@ -1,0 +1,48 @@
+.backgroundImage {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.button-container {
+  position: fixed;
+  background-attachment: fixed;
+  top: 60%;
+  right: 5%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.button {
+  height: 90px;
+  width: 278px;
+  background-color: #e4cabf;
+  border: none;
+  border-radius: 40px;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Inria Serif", serif;
+  font-weight: regular;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #d0a89e;
+}
+
+.button a {
+  color: inherit;
+  text-decoration: none;
+  font-style: normal;
+}
