@@ -6,6 +6,7 @@ import OrderPage from './components/OrderPage/OrderPage';
 import AddProductForm from './components/AddProductForm/AddProductForm';
 import CheckoutPage from './components/CheckoutPage/CheckoutPage';
 import EditProductPage from './components/EditProductPage/EditProductPage';
+import OrderHistoryPage from './components/OrderHistoryPage/OrderHistoryPage'; // Добавьте импорт нового компонента
 
 const App: React.FC = () => {
   return (
@@ -68,6 +69,7 @@ const App: React.FC = () => {
           <Route path="/products/new" element={<AddProductForm />} />
           <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/products/edit/:id" element={<EditProductPage />} />
+          <Route path="/order-history" element={<OrderHistoryPage />} /> {/* Новый маршрут */}
         </Routes>
       </div>
     </Router>
