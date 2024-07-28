@@ -1,4 +1,4 @@
-.orderContainer {
+.historyContainer {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
@@ -14,28 +14,21 @@
     margin-bottom: 20px;
 }
 
-.orderList {
-    margin-bottom: 20px;
+.historyList {
+    list-style-type: none;
+    padding: 0;
 }
 
-.orderItem {
-    display: flex;
-    justify-content: space-between;
+.historyItem {
     padding: 10px;
     border-bottom: 1px solid #ddd;
 }
 
-.orderItem h3 {
+.historyItem h3 {
     margin: 0;
     font-size: 18px;
 }
 
-.orderItem p {
+.historyItem p {
     margin: 0;
-}
-
-.totalCost {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: right;
 }
