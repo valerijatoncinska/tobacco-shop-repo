@@ -4,9 +4,9 @@ import OrderPage from './components/OrderPage/OrderPage';
 import AddProductForm from './components/AddProductForm/AddProductForm';
 import CheckoutPage from './components/CheckoutPage/CheckoutPage';
 import EditProductPage from './components/EditProductPage/EditProductPage';
-import Layout from 'components/Navigation/Layout';
-import HomePage from 'components/HomePage/HomePage';
-import ModuleLoginRegister from 'components/AuthRootComponent/ModuleLoginRegister';
+import Layout from './components/Navigation/Layout';
+import HomePage from './components/HomePage/HomePage';
+import ModuleLoginRegister from './components/AuthRootComponent/ModuleLoginRegister';
 
 const App: React.FC = () => {
   return (

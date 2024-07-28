@@ -1,8 +1,8 @@
-import { useAppDispatch } from "app/hooks"
+import { useAppDispatch } from "../../app/hook"
 import axios from "axios"
 import { useState } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
-import { login } from "store/redux/userSlice"
+import { login } from "../../store/redux/userSlice"
 import LoginPage from "./LoginPage"
 import RegisterPage from "./RegisterPage"
 

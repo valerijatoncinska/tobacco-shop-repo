@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styles from "./NavBar.module.css";
-import { guestNavItems } from "constans/navigation";
+import { guestNavItems } from "../../constans/navigation";
 
 const NavBar: React.FC = () => {
 
