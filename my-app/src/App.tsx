@@ -27,7 +27,7 @@ const App: React.FC = () => {
         <Route path="/products/edit/:id" element={<EditProductPage />} />
         <Route path="/order-history" element={<OrderHistoryPage />} />
         <Route path="/admin" element={<AdminLayout />}>
-          <Route path="/admin/orders" element={<AllOrdersPage />} />
+          <Route path="/admin/view-orders" element={<AllOrdersPage />} />
         </Route>
       </Routes>
     </div>
