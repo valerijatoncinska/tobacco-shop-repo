@@ -25,6 +25,7 @@ const Navigation = () => {
             <NavLink className="nav-link" to="/admin/view-orders">View Orders</NavLink>
           </li>
         </ul>
+        <button className="button ms-3" >Sign out</button>
     </nav>
   )
 }
