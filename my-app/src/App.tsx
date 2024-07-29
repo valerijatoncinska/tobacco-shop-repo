@@ -10,6 +10,9 @@ import ModuleLoginRegister from "./components/AuthRootComponent/ModuleLoginRegis
 import AdminLayout from "./components/AdminInterface/Layout/AdminLayout"
 import AllOrdersPage from "./components/AdminInterface/AdminAllOrders/AllOrdersPage"
 import OrderHistoryPage from './components/OrderHistoryPage/OrderHistoryPage';
+import CartPage from './components/CartPage/CartPage';
+import ProductPage from './components/ProductPage/ProductPage';
+import UserProfilePage from './components/UserProfilePage/UserProfilePage';
 
 
 const App: React.FC = () => {
@@ -29,6 +32,9 @@ const App: React.FC = () => {
         <Route path="/admin" element={<AdminLayout />}>
           <Route path="/admin/view-orders" element={<AllOrdersPage />} />
         </Route>
+        <Route path="/cart" element={<CartPage />} />
+          <Route path="/products/:id" element={<ProductPage />} />
+          <Route path="/profile" element={<UserProfilePage />} />
       </Routes>
     </div>
   )
