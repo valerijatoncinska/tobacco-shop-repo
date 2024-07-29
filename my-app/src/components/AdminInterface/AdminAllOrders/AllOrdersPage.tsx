@@ -1,6 +1,7 @@
 import React from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Order from "./Order"
+import "./AllOrdersPage.css"
 
 const AllOrdersPage = () => {
   const orders = [
@@ -28,6 +29,48 @@ const AllOrdersPage = () => {
       quantity: 2,
       price: 300,
     },
+    {
+      id: 1,
+      productName: "Tobacco",
+      orderDate: "21.09.2023",
+      orderStatus: "Good",
+      quantity: 2,
+      price: 300,
+    },
+    {
+      id: 1,
+      productName: "Tobacco",
+      orderDate: "21.09.2023",
+      orderStatus: "Good",
+      quantity: 2,
+      price: 300,
+    },
+    {
+      id: 1,
+      productName: "Tobacco",
+      orderDate: "21.09.2023",
+      orderStatus: "Good",
+      quantity: 2,
+      price: 300,
+    },
+    {
+      id: 1,
+      productName: "Tobacco",
+      orderDate: "21.09.2023",
+      orderStatus: "Good",
+      quantity: 2,
+      price: 300,
+    },
+    {
+      id: 1,
+      productName: "Tobacco",
+      orderDate: "21.09.2023",
+      orderStatus: "Good",
+      quantity: 2,
+      price: 300,
+    },
+    
+    
     // Add more orders as needed
   ]
 
@@ -38,21 +81,19 @@ const AllOrdersPage = () => {
   )
 
   return (
-    <div className="order-table-container">
+    <div className="order-table-container p-5">
       <div className="container">
-        <h2 className="text-center">View orders</h2>
+        <h2 className="text-center mb-5">View orders</h2>
         <table className="table">
-          <div>
-            <div className="d-flex justify-content-between">
-              <h2>Product name</h2>
-              <h2>Date</h2>
-              <h2>Order status</h2>
-              <h2>Total quantity</h2>
-              <h2>Price</h2>
-              <h2>Total cost</h2>
+            <div className="d-flex justify-content-between mb-4">
+              <h5>Product name</h5>
+              <h5>Date</h5>
+              <h5>Order status</h5>
+              <h5>Total quantity</h5>
+              <h5>Price</h5>
+              <h5>Total cost</h5>
             </div>
-          </div>
-          <div className="order-inside">
+          <div className="data order-inside">
             {orders.map(order => (
               <Order key={order.id} order={order} />
             ))}
