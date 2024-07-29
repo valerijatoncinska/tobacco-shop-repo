@@ -9,6 +9,8 @@ import HomePage from "./components/HomePage/HomePage"
 import ModuleLoginRegister from "./components/AuthRootComponent/ModuleLoginRegister"
 import AdminLayout from "./components/AdminInterface/Layout/AdminLayout"
 import AllOrdersPage from "./components/AdminInterface/AdminAllOrders/AllOrdersPage"
+import OrderHistoryPage from './components/OrderHistoryPage/OrderHistoryPage';
+
 
 const App: React.FC = () => {
   return (
@@ -23,6 +25,7 @@ const App: React.FC = () => {
         <Route path="/products/new" element={<AddProductForm />} />
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/products/edit/:id" element={<EditProductPage />} />
+        <Route path="/order-history" element={<OrderHistoryPage />} />
         <Route path="/admin" element={<AdminLayout />}>
           <Route path="/admin/orders" element={<AllOrdersPage />} />
         </Route>
