@@ -7,6 +7,7 @@ import EditProductPage from './components/EditProductPage/EditProductPage';
 import Layout from './components/Navigation/Layout';
 import HomePage from './components/HomePage/HomePage';
 import ModuleLoginRegister from './components/AuthRootComponent/ModuleLoginRegister';
+import OrderHistoryPage from './components/OrderHistoryPage/OrderHistoryPage';
 
 const App: React.FC = () => {
   return (
