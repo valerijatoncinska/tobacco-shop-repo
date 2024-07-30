@@ -11,7 +11,7 @@ const OrderComponent: FC<IProps> = ({
   return (
     <div className="view-order d-flex justify-content-between">
       <p>{product}</p>
-      <p>{date}</p>
+      <p>{date.toLocaleString()}</p>
       <p>{status}</p>
       <p>{price} €</p>
       <p>{quantity}</p>

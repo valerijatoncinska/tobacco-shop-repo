@@ -5,7 +5,7 @@ export interface Order {
   product: string;
   quantity: number;
   price: number;
-  date: string;
+  date: Date;
   status?: string;
 }
 
