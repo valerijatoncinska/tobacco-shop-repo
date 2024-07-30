@@ -13,7 +13,8 @@ import OrderHistoryPage from './components/OrderHistoryPage/OrderHistoryPage';
 import CartPage from './components/CartPage/CartPage';
 import ProductPage from './components/ProductPage/ProductPage';
 import UserProfilePage from './components/UserProfilePage/UserProfilePage';
-
+import PaymentPage from './components/PaymentPage/PaymentPage';
+import OrderConfirmationPage from './components/OrderConfirmationPage/OrderConfirmationPage';
 
 const App: React.FC = () => {
   return (
@@ -35,6 +36,8 @@ const App: React.FC = () => {
         <Route path="/cart" element={<CartPage />} />
           <Route path="/products/:id" element={<ProductPage />} />
           <Route path="/profile" element={<UserProfilePage />} />
+          <Route path="/payment" element={<PaymentPage />} />
+          <Route path="/order-confirmation" element={<OrderConfirmationPage />} />
       </Routes>
     </div>
   )
