@@ -5,6 +5,8 @@ interface Order {
   product: string;
   quantity: number;
   price: number;
+  date?: string;
+  status?: string;
 }
 
 interface OrdersState {
