@@ -1,17 +1,11 @@
 import type { FC } from "react"
+import { Order } from "store/redux/orderSlice"
 
 interface IProps {
-  order: {
-    id: number
-    product: string
-    quantity: number
-    price: number
-    date?: string
-    status?: string
-  }
+  order: Order
 }
 
-const Order: FC<IProps> = ({
+const OrderComponent: FC<IProps> = ({
   order: { product, date, status, quantity, price },
 }) => {
   return (
@@ -26,4 +20,4 @@ const Order: FC<IProps> = ({
   )
 }
 
-export default Order
+export default OrderComponent

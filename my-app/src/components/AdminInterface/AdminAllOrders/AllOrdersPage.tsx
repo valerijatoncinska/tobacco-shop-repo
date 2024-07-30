@@ -4,6 +4,7 @@ import Order from "./Order"
 import "./AllOrdersPage.css"
 import { useSelector } from "react-redux"
 import { RootState } from "store/store"
+import OrderComponent from "./Order"
 
 const AllOrdersPage = () => {
   // const orders = [
@@ -99,7 +100,7 @@ const AllOrdersPage = () => {
             </div>
           <div className="data order-inside">
             {orders.map(order => (
-              <Order key={order.id} order={order} />
+              <OrderComponent key={order.id} order={order} />
             ))}
           </div>
         </table>
