@@ -9,6 +9,7 @@
     "tsconfig": "^7.0.0"
   },
   "devDependencies": {
-    "@types/react": "^18.3.3"
+    "@types/react": "^18.3.3",
+    "vite": "^5.3.5"
   }
 }

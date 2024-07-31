@@ -2,16 +2,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-attachment: fixed;
   height: calc(100vh - 130px);
-  margin-top: 130px;
+  margin-top: 2%; 
   padding: 0 20px;
+  z-index: 1;
 }
 
 .card {
   width: 100%;
   max-width: 600px;
   height: auto;
-  border: 2px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 40px;
@@ -38,9 +39,9 @@
   width: 100%;
   padding: 8px;
   font-size: 16px;
-  border: 1px solid #000;
+  border: 1px solid #000000;
   border-radius: 8px;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
 }
 
 .button {
@@ -52,20 +53,47 @@
   border-radius: 15px;
   font-size: 16px;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 20px; 
 }
 
 .button:hover {
   background-color: #1a1a1a;
 }
 
-.closeButton > a {
-  font-size: 24px;
-  cursor: pointer;
+.backgroundImage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.goHomeContainer {
+  display: flex;
+  justify-content: flex-end; 
+}
+
+.goHomeButton {
+  height: 30px;
+  width: 100px; 
+  background-color: #e4cabf; 
   color: #000;
-  margin-left: 47%;
+  border: none;
+  border-radius: 10px; 
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.goHomeButton:hover {
+  background-color: #d2b59e;
+}
+
+.error {
+  margin-bottom: 20px;
   font-size: 16px;
-  text-decoration: none;
+  color: rgb(255, 0, 0);
 }
 
 /* Медиазапросы для разных размеров экрана */
@@ -101,3 +129,7 @@
   }
 }
 
+/* Для размытия фона */
+.backgroundImage {
+  filter: blur(8px);
+}
