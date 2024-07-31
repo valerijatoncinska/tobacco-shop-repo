@@ -3,8 +3,8 @@ import LoginPage from "./LoginPage";
 import { useState } from "react";
 import axios from "axios";
 import RegisterPage from "./RegisterPage";
-import { useAppDispatch } from "app/hook";
-import { login } from "store/redux/userSlice";
+import { useAppDispatch } from "../../app/hook";
+import { login } from "../../store/redux/userSlice";
 
 const ModuleLR: React.FC = () => {
   const [email, setEmail] = useState("");

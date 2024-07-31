@@ -11,11 +11,12 @@ import AdminLayout from "./components/AdminInterface/Layout/AdminLayout"
 import AllOrdersPage from "./components/AdminInterface/AdminAllOrders/AllOrdersPage"
 import OrderHistoryPage from './components/OrderHistoryPage/OrderHistoryPage';
 import CartPage from './components/CartPage/CartPage';
-import ProductPage from './components/ProductPage/ProductPage';
+import ProductPage from './components/ProductPage/ProductPage'; 
 import UserProfilePage from './components/UserProfilePage/UserProfilePage';
 import PaymentPage from './components/PaymentPage/PaymentPage';
 import OrderConfirmationPage from './components/OrderConfirmationPage/OrderConfirmationPage';
 import CatalogProductPage from "./components/CatalogProductPage/CatalogProductPage"
+import AdminCatalogProductPage from "./components/AdminInterface/CatalogProductPage/AdminCatalogProductPage"
 
 const App: React.FC = () => {
   return (
@@ -34,6 +35,7 @@ const App: React.FC = () => {
         <Route path="/order-history" element={<OrderHistoryPage />} />
         <Route path="/admin" element={<AdminLayout />}>
           <Route path="/admin/view-orders" element={<AllOrdersPage />} />
+          <Route path="/admin/catalog" element={<AdminCatalogProductPage />} />
         </Route>
         <Route path="/cart" element={<CartPage />} />
           <Route path="/products/:id" element={<ProductPage />} />
