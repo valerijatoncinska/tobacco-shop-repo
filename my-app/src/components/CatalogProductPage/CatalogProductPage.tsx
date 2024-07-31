@@ -1,8 +1,8 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './CatalogProductPage.module.css';
-import { sortByPriceAsc, sortByPriceDesc } from 'store/redux/tobaccoSlice';
-import { RootState } from 'store/store';
+import { sortByPriceAsc, sortByPriceDesc } from '../../store/redux/tobaccoSlice';
+import { RootState } from '../../store/store';
 import ProductCardPage from './ProductCardPage';
 
 const CatalogProductPage: React.FC = () => {
