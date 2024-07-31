@@ -15,7 +15,7 @@ import ProductPage from './components/ProductPage/ProductPage';
 import UserProfilePage from './components/UserProfilePage/UserProfilePage';
 import PaymentPage from './components/PaymentPage/PaymentPage';
 import OrderConfirmationPage from './components/OrderConfirmationPage/OrderConfirmationPage';
-import CatalogProductPage from "components/CatalogProductPage/CatalogProductPage"
+import CatalogProductPage from "./components/CatalogProductPage/CatalogProductPage"
 
 const App: React.FC = () => {
   return (
