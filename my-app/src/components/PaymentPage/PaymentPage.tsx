@@ -29,7 +29,7 @@ const PaymentPage: React.FC = () => {
     <div className="payment-page">
       <h1>Payment</h1>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="form-group">
           <label>
             Card Number:
             <input
@@ -40,7 +40,7 @@ const PaymentPage: React.FC = () => {
             />
           </label>
         </div>
-        <div>
+        <div className="form-group">
           <label>
             Expiry Date:
             <input
@@ -51,7 +51,7 @@ const PaymentPage: React.FC = () => {
             />
           </label>
         </div>
-        <div>
+        <div className="form-group">
           <label>
             CVV:
             <input
@@ -62,7 +62,11 @@ const PaymentPage: React.FC = () => {
             />
           </label>
         </div>
-        <button type="submit">Submit Payment</button>
+        <div className="buttons">
+          <button type="submit" className="pay-button">Pay</button>
+          <button type="button" className="paypal-button">PayPal</button>
+          <button type="button" className="gpay-button">GPay</button>
+        </div>
       </form>
     </div>
   );

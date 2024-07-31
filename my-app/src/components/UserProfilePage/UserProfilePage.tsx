@@ -1,53 +1,80 @@
 import React, { useEffect, useState } from 'react';
 import './UserProfilePage.css';
 
-interface Order {
-  id: number;
-  date: string;
-  total: number;
-}
-
 interface User {
   name: string;
   email: string;
-  orders: Order[];
+  address: {
+    city: string;
+    zipCode: string;
+    street: string;
+    apartmentNumber: string;
+  };
 }
 
 const UserProfilePage: React.FC = () => {
   const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
+    // Fetch user data from backend
     fetch('/api/user')
       .then(response => response.json())
-      .then(data => {
-        setUser(data);
-        setLoading(false);
-      });
+      .then(data => setUser(data));
   }, []);
 
-  if (loading) {
+  if (!user) {
     return <div>Loading...</div>;
   }
 
-  if (!user) {
-    return <div>User not found</div>;
-  }
+  const handleDelete = () => {
+    // Logic for deleting profile
+    alert('Profile deleted');
+  };
+
+  const handleEdit = () => {
+    // Logic for editing profile
+    alert('Edit profile');
+  };
 
   return (
     <div className="user-profile-page">
-      <h1>User Profile</h1>
-      <p>Name: {user.name}</p>
-      <p>Email: {user.email}</p>
-
-      <h2>Order History</h2>
-      <ul className="order-history">
-        {user.orders.map(order => (
-          <li key={order.id} className="order-item">
-            Order #{order.id} - {order.date} - ${order.total}
-          </li>
-        ))}
-      </ul>
+      <h1>My Profile</h1>
+      <div className="profile-sections">
+        <div className="profile-section">
+          <h2>Details</h2>
+          <label>
+            Name:
+            <input type="text" value={user.name} readOnly />
+          </label>
+          <label>
+            Email:
+            <input type="email" value={user.email} readOnly />
+          </label>
+        </div>
+        <div className="profile-section">
+          <h2>Address</h2>
+          <label>
+            City:
+            <input type="text" value={user.address.city} readOnly />
+          </label>
+          <label>
+            Zip code:
+            <input type="text" value={user.address.zipCode} readOnly />
+          </label>
+          <label>
+            Street:
+            <input type="text" value={user.address.street} readOnly />
+          </label>
+          <label>
+            Apartment number:
+            <input type="text" value={user.address.apartmentNumber} readOnly />
+          </label>
+        </div>
+      </div>
+      <div className="buttons">
+        <button className="delete-profile" onClick={handleDelete}>Delete Profile</button>
+        <button className="edit-profile" onClick={handleEdit}>Edit Profile</button>
+      </div>
     </div>
   );
 }

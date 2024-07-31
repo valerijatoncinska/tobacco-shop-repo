@@ -1,5 +1,4 @@
 import React from "react";
-import "./CatalogProductPage.css";
 import { ITobacco } from "store/redux/tobaccoSlice";
 
 interface ITobaccoProps {
