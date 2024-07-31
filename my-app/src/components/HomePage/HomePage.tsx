@@ -1,19 +1,31 @@
+import { Link } from "react-router-dom";
 import styles from "./HomePage.module.css";
 
 const HomePage: React.FC = () => {
   return (
     <>
-     <img 
+      <img
         src="/img/unsplash_PzXqG8f2rrE.jpg"
-        alt="Main Background" 
-        className={styles.backgroundImage} 
+        alt="Main Background"
+        className={styles.backgroundImage}
       />
-    <div className={styles["button-container"]}>
-      <button className={styles.button}>Catalog</button>
-      <button className={styles.button}>
-        <a href="http://localhost:5173/auth/register">Registration</a>
-      </button>
-    </div>
+      <p className={styles.p}>
+        Tabacco Tabacco Tabacco Tabacco Tabacco Tabacco Tabacco Tabacco Tabacco
+        Tabacco Tabacco Tabacco Tabacco Tabacco Tabacco Tabacco Tabacco Tabacco
+        Tabacco Tabacco Tabacco Tabacco Tabacco Tabacco Tabacco Tabacco Tabacco
+        Tabacco Tabacco Tabacco
+      </p>
+      <div className={styles["button-container"]}>
+        <button className={styles.button}>
+          <Link to="/catalog">Catalog</Link>
+        </button>
+        <button className={styles.button}>
+          <Link to="/auth/register">Registration</Link>
+        </button>
+      </div>
+      <div className={styles.blackBottom}>
+        <p className={styles.pBottom}>Have a good day!</p>
+      </div>
     </>
   );
 };

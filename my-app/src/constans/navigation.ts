@@ -7,7 +7,7 @@ export const authNavItems = [
   { to: "/profile", label: "My profile" },
   { to: "/logout", label: "Logout" },
   { to: "/cart", label: "Cart" },
-  { to: "/orders/my", label: "My orders" },
+  { to: "/orders", label: "My orders" },
 ]
 
 export const guestNavItems = [

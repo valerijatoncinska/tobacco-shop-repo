@@ -1,11 +1,7 @@
 .backgroundImage {
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background-attachment: fixed;
-  object-fit: cover;
-  z-index: -1;
+  height: auto;
+  display: block;
 }
 
 .button-container {
@@ -16,7 +12,7 @@
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 60px;
 }
 
 .button {
@@ -34,10 +30,75 @@
   text-decoration: none;
   font-family: "Inria Serif", serif;
   font-weight: regular;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #d0a89e;
 }
 
 .button a {
   color: inherit;
   text-decoration: none;
   font-style: normal;
+}
+
+.error {
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border: 0.4em solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spinner-border 0.75s linear infinite;
+}
+
+.p {
+  position: absolute;
+  left: 20px;
+  top: 43%; 
+  transform: translateY(-50%); 
+  color: white; 
+  padding: 10px;
+  border-radius: 5px; 
+  font-size: 50px;
+  margin-top: 8%;
+  margin-right: 30%;
+}
+
+.blackBottom {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(13, 13, 13);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.pBottom {
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+  font-family: "Inria Serif", serif;
+}
+
+@keyframes spinner-border {
+  to {
+    transform: rotate(360deg);
+  }
 }
