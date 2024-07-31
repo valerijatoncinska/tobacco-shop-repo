@@ -15,6 +15,7 @@ import ProductPage from './components/ProductPage/ProductPage';
 import UserProfilePage from './components/UserProfilePage/UserProfilePage';
 import PaymentPage from './components/PaymentPage/PaymentPage';
 import OrderConfirmationPage from './components/OrderConfirmationPage/OrderConfirmationPage';
+import CatalogProductPage from "./components/CatalogProductPage/CatalogProductPage"
 
 const App: React.FC = () => {
   return (
@@ -25,6 +26,7 @@ const App: React.FC = () => {
         <Route index element={<HomePage />} />
         <Route path="/auth/login" element={<ModuleLoginRegister />} />
         <Route path="/auth/register" element={<ModuleLoginRegister />} />
+        <Route path="/catalog" element={<CatalogProductPage />} />
         <Route path="/orders" element={<OrderPage />} />
         <Route path="/products/new" element={<AddProductForm />} />
         <Route path="/checkout" element={<CheckoutPage />} />

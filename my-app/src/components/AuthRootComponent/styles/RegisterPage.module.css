@@ -12,7 +12,11 @@
   width: 100%;
   max-width: 600px;
   height: auto;
+<<<<<<< HEAD
   border-radius: 10px;
+=======
+  border-radius: 10px; 
+>>>>>>> a6ef7ae4d5d2c87cec701309f6bd8ca6baf6e23d
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 40px;
   background-color: #e4cabf;

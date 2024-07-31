@@ -32,9 +32,14 @@ const OrderConfirmationPage: React.FC = () => {
     <div className="order-confirmation-page">
       <h1>Order Confirmation</h1>
       <p>Thank you for your purchase!</p>
-      <p>Order ID: {order.id}</p>
-      <p>Date: {order.date}</p>
-      <p>Total: ${order.total}</p>
+      <div className="order-details">
+        <p>Order ID: {order.id}</p>
+        <p>Date: {order.date}</p>
+        <p>Total: €{order.total}</p>
+      </div>
+      <footer>
+        <p>Have a good day!</p>
+      </footer>
     </div>
   );
 }

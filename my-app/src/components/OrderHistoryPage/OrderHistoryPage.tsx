@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { RootState } from '../../store/store'
 import styles from './OrderHistoryPage.module.css';
+import { RootState } from 'store/store';
 
 const OrderHistoryPage: React.FC = () => {
     const orderHistory = useSelector((state: RootState) => state.orderHistory.history);
