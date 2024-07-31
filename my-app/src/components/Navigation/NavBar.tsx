@@ -2,8 +2,8 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
 import styles from './NavBar.module.css';
-import { RootState } from 'store/store';
 import { authNavItems, guestNavItems } from 'constans/navigation';
+import { RootState } from 'store/store';
 
 const NavBar: React.FC = () => {
   const isLoggedIn = useSelector((state: RootState) => state.user.isLoggedIn);
