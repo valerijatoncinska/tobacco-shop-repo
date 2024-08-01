@@ -87,7 +87,7 @@ const LoginPage: React.FC = () => {
           </div>
         )}
         {error && <div className={styles.error}>{error}</div>}
-        ошибок
+        
         <form onSubmit={handleSubmit}>
           <div className={styles.formGroup}>
             <label htmlFor="email" className={styles.label}>
