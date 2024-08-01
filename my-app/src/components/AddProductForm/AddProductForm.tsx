@@ -17,10 +17,10 @@ const AddProductForm: React.FC = () => {
     // Логика добавления продукта
     console.log({ name, price })
 
-    dispatch(setIsAddedFalse())
+    dispatch(setIsAddedFalse()) // связь с AdminInterfaceCatalogProductPage
   }
 
-  if (!isAdded) {
+  if (!isAdded) { // связь с AdminInterfaceCatalogProductPage
     return null
   }
 
