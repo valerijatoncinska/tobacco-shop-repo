@@ -112,7 +112,7 @@ const RegisterPage: React.FC = () => {
           </div>
         )}
         {error && <div className={styles.error}>{error}</div>}
-        ошибок
+        
         <form onSubmit={handleSubmit}>
           <div className={styles.formGroup}>
             <label htmlFor="name" className={styles.label}>
@@ -146,7 +146,7 @@ const RegisterPage: React.FC = () => {
             </label>
             <div className={styles.passwordContainer}>
               <input
-                type={showPassword ? "text" : "password"} // Переключение между текстом и паролем
+                type={showPassword ? "text" : "password"}
                 className={styles.input}
                 onChange={e => setPassword(e.target.value)}
                 id="password"
@@ -156,7 +156,7 @@ const RegisterPage: React.FC = () => {
               <button
                 type="button"
                 className={styles.togglePasswordButton}
-                onClick={() => setShowPassword(!showPassword)} // Изменение видимости пароля
+                onClick={() => setShowPassword(!showPassword)}
               >
                 {showPassword ? "Hide" : "Show"}
               </button>
@@ -168,7 +168,7 @@ const RegisterPage: React.FC = () => {
             </label>
             <div className={styles.passwordContainer}>
               <input
-                type={showConfirmPassword ? "text" : "password"} // Переключение между текстом и паролем для подтверждения
+                type={showConfirmPassword ? "text" : "password"}
                 className={styles.input}
                 onChange={e => setRepeatPassword(e.target.value)}
                 id="confirmPassword"
