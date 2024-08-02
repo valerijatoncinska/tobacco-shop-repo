@@ -12,13 +12,13 @@ const Navigation = () => {
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" to="/admin/catalog-products">
+          <NavLink className="nav-link" to="/admin/catalog">
             Catalog Products
           </NavLink>
         </li>
         <li className="nav-item">
           <NavLink className="nav-link" to="/admin/order-details">
-            Order Details
+            Orders Details
           </NavLink>
         </li>
         <li className="nav-item">
