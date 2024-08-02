@@ -2,8 +2,8 @@ import React, { useState } from "react"
 import styles from "./styles/RegisterPage.module.css"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
-import { useAppDispatch } from "../../app/hook"
-import { login } from "../../store/redux/userSlice"
+import { useAppDispatch } from "app/hook"
+import { login } from "store/redux/userSlice"
 
 const RegisterPage: React.FC = () => {
   const [name, setName] = useState<string>("")
