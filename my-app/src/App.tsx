@@ -16,8 +16,8 @@ import PaymentPage from './components/PaymentPage/PaymentPage';
 import OrderConfirmationPage from './components/OrderConfirmationPage/OrderConfirmationPage';
 import CatalogProductPage from "./components/CatalogProductPage/CatalogProductPage"
 import AdminCatalogProductPage from "./components/AdminInterface/CatalogProductPage/AdminCatalogProductPage"
-import LoginPage from "components/AuthRootComponent/LoginPage"
-import RegisterPage from "components/AuthRootComponent/RegisterPage"
+import LoginPage from "./components/AuthRootComponent/LoginPage"
+import RegisterPage from "./components/AuthRootComponent/RegisterPage"
 
 const App: React.FC = () => {
   return (
