@@ -2,8 +2,8 @@ import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
 import styles from "./styles/LoginPage.module.css"
-import { useAppDispatch } from "../../app/hook"
-import { login } from "../../store/redux/userSlice"
+import { useAppDispatch } from "app/hook"
+import { login } from "store/redux/userSlice"
 
 const LoginPage: React.FC = () => {
 
