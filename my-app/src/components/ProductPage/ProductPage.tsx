@@ -29,13 +29,13 @@ const ProductPage: React.FC = () => {
   useEffect(() => {
     setLoading(true);
     Promise.all([
-      fetch(`/api/products/${id}`).then(response => {
+      fetch(`https://smoke-shop-68y5q.ondigitalocean.app/api/products/${id}`).then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
         return response.json();
       }),
-      fetch(`/api/user`).then(response => {
+      fetch(`https://smoke-shop-68y5q.ondigitalocean.app/api/user`).then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }

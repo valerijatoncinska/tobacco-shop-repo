@@ -11,7 +11,7 @@ const PaymentPage: React.FC = () => {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     // Send payment details to the backend and get order details in response
-    fetch('/api/checkout', {
+    fetch('https://smoke-shop-68y5q.ondigitalocean.app/api/checkout', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -22,6 +22,9 @@ const PaymentPage: React.FC = () => {
     .then(order => {
       // Redirect to order confirmation page with order details
       navigate('/order-confirmation', { state: { order } });
+    })
+    .catch(error => {
+      console.error('Error:', error);
     });
   };
 
