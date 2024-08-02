@@ -23,13 +23,13 @@ const CartPage: React.FC = () => {
 
   useEffect(() => {
     const fetchCartItems = async () => {
-      const response = await fetch('https://smoke-shop-68y5q.ondigitalocean.app/api/cart');
+      const response = await fetch('/api/cart');
       const data = await response.json();
       setCartItems(data);
     };
 
     const fetchUserData = async () => {
-      const response = await fetch('https://smoke-shop-68y5q.ondigitalocean.app/api/user');
+      const response = await fetch('/api/user');
       const data = await response.json();
       setUser(data);
     };

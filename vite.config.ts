@@ -8,7 +8,8 @@ export default defineConfig({
     open: true,
     proxy: {
       "/api": {
-        target: "https://smoke-shop-68y5q.ondigitalocean.app",
+        // target: "https://smoke-shop-68y5q.ondigitalocean.app",
+        target: "http://localhost:8080",
       },
     },
   },
