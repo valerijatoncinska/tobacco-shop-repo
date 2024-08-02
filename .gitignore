@@ -11,8 +11,6 @@ lerna-debug.log*
 dist
 dist-ssr
 *.local
-/package-lock.json
-/package.json
 
 # Editor directories and files
 .vscode/*
