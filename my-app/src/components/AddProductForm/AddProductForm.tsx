@@ -1,8 +1,7 @@
-import React, { useState } from "react"
-import AddProductItem from "./AddProductItem"
-import { useDispatch, useSelector } from "react-redux"
-import { AppDispatch, RootState } from "store/store"
-import { setIsAddedFalse } from "../../store/redux/addNewProductSlice"
+import React, { useState } from 'react';
+import AddProductItem from './AddProductItem';
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch, RootState } from '../../store/store';
 
 const AddProductForm: React.FC = () => {
   const [name, setName] = useState("")
